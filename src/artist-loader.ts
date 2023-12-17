@@ -32,7 +32,7 @@ type Artist = {
  * Chunk exported artist data into document chunks.
  *
  * ```js
- * const chunker = new ArtistChunker("data/artists-p1.json");
+ * const chunker = new ArtistChunker("data/artists-p1.json"); // Artist[]
  * const chunks = await chunker.chunk();
  * console.log(chunks);
  * ```
