@@ -15,7 +15,8 @@
     "start": "bun run index.ts",
     "dev": "bun --watch run index.ts",
     "qa": "bun src/pg-query.ts",
-    "up": "docker-compose up"
+    "up": "docker-compose up",
+    "db": "docker exec -it bunsy-db-1 psql -d api -U myuser"
   },
   "dependencies": {
     "@types/pg": "^8.10.9",
