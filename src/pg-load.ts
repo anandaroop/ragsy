@@ -8,7 +8,7 @@ import { ArtistChunker } from "./artist-loader";
 /* Configure */
 
 // setup: https://js.langchain.com/docs/modules/indexes/vector_stores/integrations/pgvector
-// connect: docker exec -it bunsy-db-1 bash
+// connect: docker exec -it ragsy-db-1 bash
 
 const config = {
   postgresConnectionOptions: {
