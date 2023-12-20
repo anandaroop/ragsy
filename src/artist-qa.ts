@@ -1,3 +1,4 @@
+import { green } from "ansis";
 import { ArtistStore } from "./artist-store";
 
 try {
@@ -26,7 +27,7 @@ try {
       prompt();
     } else {
       const response = await artists.ask(query);
-      console.log(`A: ${response}`);
+      console.log("\n", green`${response}`);
       prompt();
     }
   }

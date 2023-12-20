@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@types/pg": "^8.10.9",
+    "ansis": "^2.0.3",
     "figlet": "^1.7.0",
     "langchain": "^0.0.208",
     "pdf-parse": "^1.1.1",

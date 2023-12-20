@@ -1,3 +1,4 @@
+import { green } from "ansis";
 import { ArtistStore } from "./artist-store";
 
 try {
@@ -27,7 +28,7 @@ try {
       prompt();
     } else {
       const response = await chat.send(query);
-      console.log(`A: ${response.text}`);
+      console.log("\n", green`${response.text}`);
       prompt();
     }
   }
