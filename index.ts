@@ -1,18 +1,23 @@
-import { RetrievalQAChain } from "langchain/chains";
-import { ChatOpenAI } from "langchain/chat_models/openai";
 import { ArtistStore } from "./src/artist-store";
 
-console.log("\nConnecting…");
+console.log("\nConnecting…\n");
 const artists = await ArtistStore.connect();
 
-console.log("\nSetting up Q&A…\n");
-const model = new ChatOpenAI({ modelName: "gpt-3.5-turbo" });
-const chain = RetrievalQAChain.fromLLM(model, artists.store.asRetriever());
+console.log("Setting up chat…\n");
+const chat = artists.asChat();
 
-const query = `Can you name some artists who deal with the middle east conflict in their art? Please succinctly describe their artistic practice.`;
-console.log(query + "\n")
+const query1= 'Name one artist from the Dada movement'
+const response1 = await chat.send(query1)
+console.log({query1, response1})
 
-const response = await chain.call({ query });
-console.log(response.text);
+const query2= 'Tell me some more about their art'
+const response2 = await chat.send(query2)
+console.log({query2, response2})
+
+const query3= 'Who are some similar artists?'
+const response3 = await chat.send(query3)
+console.log({query3, response3})
+
+console.log("Done.")
 
 await artists.close();
