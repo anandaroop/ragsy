@@ -14,9 +14,10 @@
   "scripts": {
     "start": "bun run index.ts",
     "dev": "bun --watch run index.ts",
-    "qa": "bun src/pg-query.ts",
     "up": "docker-compose up",
-    "db": "docker exec -it ragsy-db-1 psql -d api -U myuser"
+    "db": "docker exec -it ragsy-db-1 psql -d api -U myuser",
+    "qa": "bun src/artist-qa.ts",
+    "chat": "bun src/artist-chat.ts"
   },
   "dependencies": {
     "@types/pg": "^8.10.9",
