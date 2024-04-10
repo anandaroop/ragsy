@@ -15,7 +15,7 @@
     "start": "bun run index.ts",
     "dev": "bun --watch run index.ts",
     "up": "docker-compose up",
-    "dbbun ": "docker exec -it ragsy-db-1 psql -d api -U myuser",
+    "dbbun": "docker exec -it ragsy-db-1 psql -d api -U myuser",
     "reset": "bun src/pg-reset.ts",
     "load": "bun src/pg-load.ts",
     "qa": "bun src/artist-qa.ts",
